@@ -1,0 +1,47 @@
+* {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+body {
+    background-color: #F4F1E1;
+    color: #4A4A4A;
+}
+
+.beskrivning {
+    height: 160px;
+    word-break: break-word;
+    margin-left: "25px";
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+.produktbild {
+    max-width: 100px;
+    max-height: 160px;
+}
+
+#img {
+    min-width: 100px;
+}
+
+.produktinfo:hover {
+    cursor: pointer;
+}
+
+.card {
+    color: #4A4A4A;
+    max-width: 350px;
+}
+
+.btn {
+    background-color: #A8D5BA;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #719f84;
+}
+  
+.ordered-product {
+    background-color: white;
+    box-shadow: 2px 1px 5px rgb(196, 195, 195);
+}
