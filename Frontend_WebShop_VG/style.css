@@ -1,0 +1,110 @@
+* {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+body {
+    background-color: #F4F1E1;
+    color: #4A4A4A;
+}
+
+#listaProdukterna {
+    justify-self: center;
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+
+.beskrivning {
+    height: 160px;
+    word-break: break-word;
+    margin-left: "25px";
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+.produktbild {
+    max-width: 100px;
+    max-height: 160px;
+}
+
+#img {
+    min-width: 100px;
+}
+
+.produktinfo:hover {
+    cursor: pointer;
+}
+
+.card {
+    color: #4A4A4A;
+    max-width: 300px;
+}
+
+.btn {
+    background-color: #A8D5BA;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #719f84;
+}
+
+#empty-cart {
+    background-color: #df8a8a;
+    border: none;
+}
+
+#empty-cart:hover {
+    background-color: #c97070;
+}
+  
+#ordered-products, .cart-product {
+    background-color: white;
+    box-shadow: 2px 1px 5px rgb(196, 195, 195);
+}
+
+#cart-symbol {
+    align-self: center;
+    position: fixed;
+}
+
+#cart-svg {
+    max-height: 40px;
+}
+
+#cart {
+    max-width: 600px;
+    min-width: 300px;
+}
+
+.cart-product {
+    align-items: center;
+}
+
+.cart-img {
+    max-width: 25%;
+    max-height: fit-content;
+    min-width: 100px;
+}
+
+.change-quantity {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 10px;
+    padding-top: 0px;
+    padding-bottom: 2.3rem;
+    width: 2.5rem;
+    height: 2rem;
+    text-justify: center;
+}
+
+#remove {
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0px 5px 2px 5px;
+    text-justify: center;
+    background-color: #df8a8a;
+}
+
+#remove:hover {
+    background-color: #c97070;
+}
+
