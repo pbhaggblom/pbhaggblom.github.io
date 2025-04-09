@@ -4,9 +4,13 @@ document.addEventListener("DOMContentLoaded", (e) => {
     .then(visaProdukter);
 });
 
-document.getElementById('cart-quantity').innerHTML = JSON.parse(localStorage.getItem('cart')).length;
-
 function visaProdukter(produkter) {
+  if (localStorage.getItem('cart')) {
+    document.getElementById('cart-quantity').innerHTML = JSON.parse(localStorage.getItem('cart')).length;
+  } else {
+    document.getElementById('cart-quantity').innerHTML = "0";
+  }
+  
   let indexDiven = document.getElementById("listaProdukterna");
 
   for (let i = 0; i < produkter.length; i++) {

@@ -1,19 +1,26 @@
-let products = JSON.parse(localStorage.getItem('cart'));
-
-if (products === null) {
-    document.getElementById('cart').innerHTML = 'Din varukorg är tom';
-}
-
 let productQuantities = new Map();
+let products = [];
 
-products.forEach(product => {
-    productQuantities.set(product.id, (productQuantities.get(product.id) || 0) + 1);
+document.addEventListener("DOMContentLoaded", (e) => {
+
+    if (localStorage.getItem('cart')) {
+        products = JSON.parse(localStorage.getItem('cart'));
+    } 
+
+    if (products === null) {
+        document.getElementById('cart').innerHTML = 'Din varukorg är tom';
+    }
+
+    products.forEach(product => {
+        productQuantities.set(product.id, (productQuantities.get(product.id) || 0) + 1);
+    });
+    let total = calculateCartTotal();
+
+    productQuantities.forEach(showCartProduct);
+
+    document.getElementById('price').innerHTML = total;
 });
-let total = calculateCartTotal();
 
-productQuantities.forEach(showCartProduct);
-
-document.getElementById('price').innerHTML = total;
 
 function showCartProduct(value, key, map) {
 
@@ -117,6 +124,7 @@ function addItem(id) {
     let quantity = productQuantities.get(id) + 1;
     productQuantities.set(id, quantity);
 
+    document.getElementById('price').innerHTML = calculateCartTotal();
     updateCard(id, quantity);
 }
 
